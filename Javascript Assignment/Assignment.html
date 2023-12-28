@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        body{
+            transition: all 1s ease-in-out;
+            letter-spacing: 1px;
+        }
+        h1{
+            text-align: center;
+        }
+        li {
+            font-size: 1.4rem;
+            margin: 10px 0;
+        }
+        button{
+            padding: 10px 30px;
+            font-size: 1.4rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        input{
+            padding: 15px 2px;
+            font-size: 1.4rem;
+            border: none;
+            outline: none;
+        }
+        .dark{
+            background-color: #14213d;
+            color: white;
+        }
+        .light{
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <h1>JAVASCRIPT BASIC & DOM</h1>
+    <p></p>
+
+    <ul>
+        <li>
+            <h3>What is JavaScript?</h3>
+        </li>
+        <li>
+            <p>
+            <ul>
+                <li>JavaScript is client side scripting language </li>
+                <li>Javascript is a dynamically typed language</li>
+                <li>JavaScript is case sensitive language</li>
+                <li>JavaScript has more than 44lakhs of library</li>
+                <li>some of famous library's are jquery,reactjs,vuejs</li>
+                <li>some of famous frameworks are nextjs and nodejs</li>
+                <li>javascript is syncronous language</li>
+                <li>it is one of most useable language in current scenario</li>
+            </ul>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What is the use of isNaN function?</h3>
+        </li>
+        <li>
+            <p>
+            <ul>
+                <li>isNaN is used to check NaN (Not a Numbeer)</li>
+                <li>isNaN() is a method that determines whether a value is a number or not</li>
+                <li> The isNaN() method returns true if a value is NaN</li>
+            </ul>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What is negative Infinity?</h3>
+        </li>
+        <li>
+            <p>Negative infinity is a special numeric value that is returned when an arithmetic operation or
+                mathematical function generates a negative value greater than the largest representable number in
+                JavaScript </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>Which company developed JavaScript?</h3>
+        </li>
+        <li>
+            <p>JavaScript was created at Netscape Communications by Brendan Eich in 1995. Netscape and Eich designed
+                JavaScript as a scripting language for use with the company's flagship web browser, Netscape Navigator.
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What are undeclared and undefined variables?</h3>
+        </li>
+        <li>
+            <p> an undeclared variable is a variable that has not been declared or defined in the current scope. An
+                undefined variable is a variable that has been declared but not given a value.
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>Write the code for adding new elements dynamically?</h3>
+        </li>
+        <li>
+            <div id="appendDiv">
+                <input type="text" id="element" placeholder="Enter the Element to Add">
+                <input type="text" id="text" placeholder="Enter the text inside the element">
+                <button onclick="addElement()">Add Element</button>
+            </div>
+            <ul>
+                <h2>Code</h2>
+                <li> let element = document.getElementById("element")</li>
+                <li> text = document.getElementById("text")</li>
+
+                <li>function addElement() {
+                    let createdEle = document.createElement(element.value)
+                    if (text.value === "") {
+                    createdEle.innerHTML = "Element Added"
+                    } else {
+                    createdEle.innerHTML = text.value
+                    }
+                    document.getElementById("appendDiv").append(createdEle)
+                    }
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What is the difference between ViewState and SessionState?</h3>
+        </li>
+        <li>
+            <p>
+            <ul>
+                <li>State management concerned with the client-side uses View state. It stores the information in
+                    text fields, checkboxes, and radio buttons within a hidden field of a web page, not shared
+                    between the other web pages of the website.</li>
+
+                <li>a POST event, it'll retain this information only accessible by elements of the same web page;
+                    however, loss of this information occurs as soon as another page is loaded.</li>
+            </ul>
+            </p>
+        </li>
+        <li>
+            <p>
+            <ul>
+                <li>Server-side state management utilizes user sessions to maintain information and its flow shared
+                    between the website's web pages. The web server stores the client session information and uses
+                    cookies to store keys associated with a particular client.</li>
+
+                <li>Session expiration can clear a user's information. A timeout occurs due to a user's inactivity
+                    on a webpage, and the session expires to prevent data loss to non-authentic users.</li>
+            </ul>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What is === operator?</h3>
+        </li>
+        <li>
+            <p>it is a <b>Strict Equal to Operator</b> which checks the datatype also
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>How can the style/class of an element be changed?</h3>
+        </li>
+        <li>
+            <p> Example : <button id="color" onclick="changeMode()">Change Mode</button>
+            <ol>
+                <li><b>Use the style attribute</b>
+                    You can set the style of an HTML element using the style attribute. The property is a CSS property,
+                    and the value is a CSS value.</li>
+                <li>You can change the style of an element by changing its class attribute. To access the element's
+                    class, you can use element.className.</li>
+                <li><b>Use the classList method</b>
+                    Modern browsers have the classList method, which provides methods to make it easier to manipulate
+                    classes. For example, you can use the following code to add a class to an element:
+                    document.getElementById("MyElement").classList.add('MyClass');.</li>
+            </ol>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>How to read and write a file using JavaScript?</h3>
+        </li>
+        <li>
+            <p>The read and write operations in a file can be done by the module which is required to perform these
+                operations is to be imported. The required module is 'fs' which is called as File System module in
+                JavaScript.</p>
+        </li>
+        <ul>
+            <li>the writeFile() operation is called. The writeFile() method is used to write into the file in JavaScript
+            <li><b>Syntax :</b> writeFile(path,inputData,callBackFunction)</li>
+            </li>
+        </ul>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What are all the looping structures in JavaScript?</h3>
+        </li>
+        <li>
+            <p>
+            <ol>
+                <li>for..loop <b>for(let i=0(initialization); i < 5(condition); i++(updation)){ ..block of code }</b>
+                </li>
+                <li>while..loop <b>while(condition){ ..block of code }</b></li>
+                <li>do..while loop <b>do{ ..block of code }while(condition)</b></li>
+                <li>for..in loop <b>for(let i in array){ ..block of code}</b></li>
+                <li>for..of loop <b>for(let i of array){ ..block of code}</b></li>
+            </ol>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>How can you convert the string of any base to an integer in JavaScript?</h3>
+        </li>
+        <li>
+            <p>by using <b>parseInt() & Number() method</b></p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What is the function of the delete operator?</h3>
+        </li>
+        <li>
+            <p>The delete operator is the only way to fully remove the properties of an object in JavaScript.</p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <h3>What are all the types of Pop up boxes available in JavaScript?</h3>
+        </li>
+        <li>
+            <p>three Types of popup box
+            <ol>
+                <li onclick="(() => alert('This is alert'))();"><button>Alert()</button></li>
+                <li onclick="prompt('This is prompt Enter any thing')"><button>Prompt()</button></li>
+                <li onclick="confirm('This is Confirm')"><button>Confirm()</button></li>
+            </ol>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What is the use of Void (0)?</h3>
+        </li>
+        <li>
+            <p>javascript:void(0) means returning undefined as a primitive value. It's used to prevent negative effects
+                on a webpage when inserting an expression</p>
+        </li>
+        <li>
+            <p>This operator allows evaluating expressions that produce a value into places where an expression that
+                evaluates to undefined is desired.</p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>How can a page be forced to load another page in JavaScript?</h3>
+        </li>
+        <li>
+            <p>There are three main ways to redirect to another URL with JavaScript:
+            <ol>
+                <li>window.location.href
+                    <ul>
+                        <li>setTimeout(function() {
+                            window.location.href = "https://github.com/SohanBorawar";
+                            }, 3000);</li>
+                    </ul>
+                </li>
+                <li>location.replace()  in replace you can't get back to main file
+                    <ul>
+                        <li><button onclick="forceLoad()">Load</button>
+                            function forceLoad() {
+                            window.location.replace("https://github.com/SohanBorawar");
+                            }</li>
+                    </ul>
+                </li>
+                <li>location.assign() in replace you can get back to main file
+                    <ul>
+                        <li><button onclick="forceLoadassign()">Load</button>
+                            function forceLoad() {
+                            location.assign("https://github.com/SohanBorawar");
+                            }</li>
+                    </ul>
+                </li>
+            </ol>
+            </p>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <h3>What are the disadvantages of using innerHTML in JavaScript?</h3>
+        </li>
+        <li>
+            <p>There are several disadvantages to using innerHTML in JavaScript, including:
+            <ol>
+                <li><b>
+                        Security risk:</b>
+                    innerHTML can be used to inject malicious code into a web page, which can then be executed by the
+                    user's browser. This is known as a cross-site scripting (XSS) attack.</li>
+
+                <li><b>Performance:</b>
+                    innerHTML is slower than other methods of DOM manipulation, such as document.createElement() and
+                    document.createTextNode(). This is because innerHTML requires the entire HTML document to be
+                    re-parsed.</li>
+                <li><b>Lack of validation:</b>
+                    innerHTML does not validate the HTML that is passed to it. This can lead to errors in the DOM, which
+                    can then cause the web page to malfunction.</li>
+            </ol>
+            </p>
+        </li>
+    </ul>
+
+    <script>
+        let element = document.getElementById("element")
+        let text = document.getElementById("text")
+
+        function addElement() {
+            let createdEle = document.createElement(element.value)
+            if (text.value === "") {
+                createdEle.innerHTML = "Element Added"
+            } else {
+                createdEle.innerHTML = text.value
+            }
+            document.getElementById("appendDiv").append(createdEle)
+        }
+
+        const changeMode = () => {
+            let body = document.querySelector("body")
+            console.log(body.className)
+            body.className = body.className === "light" ? 'dark' : "light";
+            console.log(body.className);
+
+
+        }
+
+        function forceLoad() { window.location.replace("https://github.com/SohanBorawar"); }
+        function forceLoadassign() { location.assign("https://github.com/SohanBorawar"); }
+
+
+    </script>
+
+</body>
+
+</html>
