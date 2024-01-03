@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>JavaScript Assessment Test 5</li>
+            <li> Write a function that takes an array of numbers as argument</li>
+            <li> Convert the array to an object</li>
+            <li> It should have a key for each unique value of the array</li>
+            <li> The corresponding object value should be the number of times the key
+                occurs within the array</li>
+        </ul>
+    </div>
+    <script>
+        // let arr = [1,2,2,3]
+        let arr = [9,9,9,99]
+        
+        function convertToObj(array){
+            let obj = {}
+            for(let i of arr){
+                if(i in obj){
+                    obj[i] += 1
+                }
+                else{
+                    obj[i] = 1
+                }
+            }
+            return obj
+        }
+
+        console.log(convertToObj(arr))
+
+    </script>
+</body>
+
+</html>
